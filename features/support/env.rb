@@ -10,8 +10,8 @@ require 'base64'
 require 'webdrivers'
 
 
-Capybara.app_host = 'http://www.apimation.com'
-Capybara.save_path = 'report/'
+Capybara.app_host = ENV['HOST']
+Capybara.save_path = ENV['REPORT_PATH']
 Capybara::Screenshot.autosave_on_failure = false
 Capybara::Screenshot.prune_strategy = :keep_last_run
 # =================================================================== #
