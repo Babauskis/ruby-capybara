@@ -9,9 +9,9 @@ class Optparse
 
     def self.parse(args)
         options = OpenStruct.new
-        options.format = 'json'
+        options.format = 'html'
         options.path = 'report/'
-        options.host = "https://apimation.com"
+        options.host = "https://www.1a.lv"
         options.threads = '2'
 
         
@@ -28,7 +28,7 @@ class Optparse
                 options.path = path
             end
 
-            opts.on('-e', '--env [env]', 'Target host [https://apimation.com]') do |host|
+            opts.on('-e', '--env [env]', 'Target host [https://www.1a.lv]') do |host|
                 options.host = host
             end
 

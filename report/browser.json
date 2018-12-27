@@ -8,9 +8,9 @@
     "line": 1,
     "elements": [
       {
-        "id": "demo-feature;i-can-fill-in-sign-up-form",
+        "id": "demo-feature;i-can-search-for-an-item",
         "keyword": "Scenario",
-        "name": "I can fill in sign up form",
+        "name": "I can search for an item",
         "description": "",
         "line": 3,
         "type": "scenario",
@@ -21,7 +21,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28000
+              "duration": 32000
             }
           },
           {
@@ -39,7 +39,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9000
+              "duration": 8000
             }
           },
           {
@@ -48,90 +48,21 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3561220000
+              "duration": 6253692000
             }
           }
         ],
         "steps": [
           {
             "keyword": "Given ",
-            "name": "I am on Apimation home page",
+            "name": "I am on 1a.lv homepage",
             "line": 4,
             "match": {
               "location": "features/step_definitions/signup_steps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 1773452000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 33000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "When ",
-            "name": "I open Sign up form",
-            "line": 5,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 116260000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 27000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "Then ",
-            "name": "I fill in Sign up required information",
-            "line": 6,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 528798000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 21000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "And ",
-            "name": "I close Sign up form",
-            "line": 7,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 72979000
+              "duration": 3977701000
             },
             "after": [
               {
@@ -144,6 +75,29 @@
                 }
               }
             ]
+          },
+          {
+            "keyword": "And ",
+            "name": "I search for an item",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/signup_steps.rb:5"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "undefined method `isVisible' for nil:NilClass (NoMethodError)\n./features/tests/search_tests.rb:13:in `enter_search_for_items'\n./features/step_definitions/signup_steps.rb:6:in `/^I search for an item/'\nfeatures/demo.feature:5:in `And I search for an item'",
+              "duration": 420000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/env.rb:47"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
           }
         ],
         "after": [
@@ -152,8 +106,9 @@
               "location": "features/support/env.rb:37"
             },
             "result": {
-              "status": "passed",
-              "duration": 4819000
+              "status": "failed",
+              "error_message": "No such file or directory @ rb_sysopen - report/{file_name} (Errno::ENOENT)\n./features/support/env.rb:54:in `add_screenshot'\n./features/support/env.rb:38:in `After'",
+              "duration": 893293000
             }
           },
           {
@@ -171,199 +126,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85891000
-            }
-          }
-        ]
-      },
-      {
-        "id": "demo-feature;i-can-fill-in-login-form-and-validate-an-incorrect-input",
-        "keyword": "Scenario",
-        "name": "I can fill in login form and validate an incorrect input",
-        "description": "",
-        "line": 9,
-        "type": "scenario",
-        "before": [
-          {
-            "match": {
-              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 11000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-screenshot-1.0.22/lib/capybara-screenshot/cucumber.rb:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10000
-            }
-          },
-          {
-            "match": {
-              "location": "features/support/env.rb:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4355000
-            }
-          }
-        ],
-        "steps": [
-          {
-            "keyword": "Given ",
-            "name": "I am on Apimation home page",
-            "line": 10,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 829804000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 27000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "When ",
-            "name": "I open Login form",
-            "line": 11,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 99502000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 19000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "Then ",
-            "name": "I fill in Login required information",
-            "line": 12,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 303260000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 24000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "And ",
-            "name": "I click login button from Login Form",
-            "line": 13,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 92264000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 16000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "Then ",
-            "name": "I validate negative Login error message",
-            "line": 14,
-            "match": {
-              "location": "features/step_definitions/signup_steps.rb:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25871000
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/support/env.rb:47"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 24000
-                }
-              }
-            ]
-          }
-        ],
-        "after": [
-          {
-            "match": {
-              "location": "features/support/env.rb:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4687000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-screenshot-1.0.22/lib/capybara-screenshot/cucumber.rb:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17000
-            }
-          },
-          {
-            "match": {
-              "location": "capybara-3.12.0/lib/capybara/cucumber.rb:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 53331000
+              "duration": 90769000
             }
           }
         ]

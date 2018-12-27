@@ -3,9 +3,9 @@ class Tests
     @pages = pages
   end
 
-  def login_tests
-    @login_tests ||= LoginTest.new(@pages)
-    @login_tests
+  def search_tests
+    @search_tests ||= SearchTest.new(@pages)
+    @search_tests
   end
 
 end
