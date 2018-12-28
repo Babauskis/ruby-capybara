@@ -28,4 +28,48 @@ class Element
   def clear
     find.native.clear
   end
+
+def text
+  find.text
+end
+
+def value
+  find.value
+end
+
+def checked?
+  find.checked?
+end
+
+def double_click
+  find.double_click
+end
+
+def set(value)
+  find.set(value)
+end
+
+def xpath
+  @value[:value]
+end
+
+def set_xpath(path)
+  @value[:value] = path
+end
+
+def disabled?
+  find.disabled?
+end
+
+def enabled?
+  !find.disabled?
+end
+
+def css
+  @value[:value]
+end
+
+def attribute(attributeName)
+  find[:atributeName]
+end
 end

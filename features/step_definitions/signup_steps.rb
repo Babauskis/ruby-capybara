@@ -8,26 +8,47 @@ And(/^I search for an item/) do
 end
 
 And(/^I verify if first item is visible/) do
-  unless find(:css, "#product_search_result_grid_container > div.product-grid.search-products > section:nth-child(1) > div > div > div > div.p-image > a:nth-child(2) > img").visible?
+  unless find(:css, "img[alt='JBL Tune 500BT Bluetooth On-Ear Headphones Black']").visible?
     raise "first item is not visible"
+  end
+if find(:xpath, '//a[contains(., "JBL Tune 500BT Bluetooth On-Ear Headphones Black")]/ancestor::div[@class="p-content"]/following-sibling::div[@class="info-holder"]/child::div[@class="p-info"]//child::div[@data-sell-price-w-vat="41.99"]').visible?
+    puts 'Test passed'
+  else
+    puts 'Price for first item was not equal'
   end
 end
 
 And(/^I verify if second item is visible/) do
-unless find(:css, "#product_search_result_grid_container > div.product-grid.search-products > section:nth-child(2) > div > div > div > div.p-image > a:nth-child(2) > img").visible?
+unless find(:css, "img[alt='JBL T450BT Bluetooth On-Ear Headphones White']").visible?
   raise "second item is not visible"
+  end
+
+  if find(:xpath, '//a[contains(., "JBL T450BT Bluetooth On-Ear Headphones White")]/ancestor::div[@class="p-content"]/following-sibling::div[@class="info-holder"]/child::div[@class="p-info"]//child::div[@data-sell-price-w-vat="66.56"]').visible?
+    puts 'Test passed'
+  else
+    puts 'Price for second item was not equal'
   end
 end
 
 And(/^I verify if third item is visible/) do
-  unless find(:css, "#product_search_result_grid_container > div.product-grid.search-products > section:nth-child(3) > div > div > div > div.p-image > a:nth-child(2) > img").visible?
+  unless find(:css, "img[alt='JBL GO 2 Bluetooth Speaker Midnight Black']").visible?
     raise "third item is not visible"
+  end
+  if find(:xpath, '//a[contains(., "JBL GO 2 Bluetooth Speaker Midnight Black")]/ancestor::div[@class="p-content"]/following-sibling::div[@class="info-holder"]/child::div[@class="p-info"]//child::div[@data-sell-price-w-vat="29.99"]').visible?
+    puts 'Test passed'
+  else
+    puts 'Price for third item was not equal'
   end
 end
 
 
 And(/^I verify if fourth item is visible/) do
-  unless find(:css, "#product_search_result_grid_container > div.product-grid.search-products > section:nth-child(4) > div > div > div > div.p-image > a:nth-child(2) > img").visible?
+  unless find(:css, "img[alt='JBL GO 2 Bluetooth Speaker Midnight Black']").visible?
     raise "fourth item is not visible"
+  end
+  if find(:xpath, '//a[contains(., "JBL GO 2 Bluetooth Speaker Midnight Black")]/ancestor::div[@class="p-content"]/following-sibling::div[@class="info-holder"]/child::div[@class="p-info"]//child::div[@data-sell-price-w-vat="31.00"]').visible?
+    puts 'Test passed'
+  else
+    puts 'Price for fourth item was not equal'
   end
 end
